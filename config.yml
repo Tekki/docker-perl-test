@@ -1,0 +1,89 @@
+---
+docker:
+  image: tekki/perl
+
+git:
+  repo: https://github.com/Tekki/docker-perl-test
+  version: '0.01'
+
+global:
+  app_folder: /usr/src/app
+  description: 'Perl test images.'
+  license: Artistic-2.0
+  perl_db_modules:
+    - DBI
+    - DBD::mysql
+    - DBD::MariaDB
+    - DBD::Pg
+    - DBD::SQLite
+  perl_modules:
+    - CPAN::Changes
+    - Devel::Cover
+    - Pod::Coverage
+  title: Perl-Test
+
+releases:
+  p30:
+    from: perl:5.30
+    versions:
+      base:
+        - 30-test
+        - test
+      db:
+        - 30-dbtest
+        - dbtest
+  p28:
+    from: perl:5.28
+    versions:
+      base:
+        - 28-test
+      db:
+        - 28-dbtest
+  p26:
+    from: perl:5.26
+    versions:
+      base:
+        - 26-test
+      db:
+        - 26-dbtest
+  p24:
+    from: perl:5.24
+    versions:
+      base:
+        - 24-test
+      db:
+        - 24-dbtest
+  p22:
+    from: perl:5.22
+    versions:
+      base:
+        - 22-test
+      db:
+        - 22-dbtest
+  p20:
+    from: perl:5.20
+    versions:
+      base:
+        - 20-test
+      db:
+        - 20-dbtest
+  p16:
+    from: perl:5.16
+    versions:
+      base:
+        - 16-test
+      db:
+        - 16-dbtest
+  p10:
+    from: perl:5.10
+    versions:
+      base:
+        - 10-test
+      db:
+        - 10-dbtest
+
+templates:
+  - source: docker-entrypoint.ep
+    target: docker-entrypoint.sh
+  - source: dockerfile.ep
+    target: Dockerfile

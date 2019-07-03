@@ -1,0 +1,30 @@
+%= $warning
+FROM <%= $from %> AS base
+
+WORKDIR <%= $global->{app_folder} %>
+
+RUN set -ex \\
+  && cpanm \\
+% for ($global->{perl_modules}->@*) {
+    <%= $_ %> \\
+% }
+  && rm -r /root/.cpanm
+
+%= $labels
+
+COPY docker-entrypoint.sh /usr/local/bin
+RUN chmod 0755 /usr/local/bin/docker-entrypoint.sh
+ENTRYPOINT ["docker-entrypoint.sh"]
+
+CMD ["prove", "-Ilib"]
+
+FROM base AS db
+
+RUN set -ex \\
+  && cpanm \\
+% for ($global->{perl_db_modules}->@*) {
+    <%= $_ %> \\
+% }
+  && rm -r /root/.cpanm
+
+%= $labels_db

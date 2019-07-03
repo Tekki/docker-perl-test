@@ -1,0 +1,43 @@
+%= $warning
+
+# <%= $global->{title} %>
+
+%= $global->{description}
+
+Different Perl versions with
+[CPAN::Changes](https://metacpan.org/pod/CPAN::Changes),
+[Devel::Cover](https://metacpan.org/pod/Devel::Cover) and
+[Pod::Coverage](https://metacpan.org/pod/Pod::Coverage).
+
+The `dbtest` images additionally contain
+[DBI](https://metacpan.org/pod/DBI),
+[DBD::MariaDB](https://metacpan.org/pod/DBD::MariaDB),
+[DBD::mysql](https://metacpan.org/pod/DBD::mysql),
+[DBD::Pg](https://metacpan.org/pod/DBD::Pg),
+[DBD::SQLite](https://metacpan.org/pod/DBD::SQLite).
+
+# Supported tags and respective Dockerfile links
+
+* Perl 5.30: <%= $p30->{dockerfile}{link} %>
+
+* Perl 5.28: <%= $p28->{dockerfile}{link} %>
+
+* Perl 5.26: <%= $p26->{dockerfile}{link} %>
+
+* Perl 5.24: <%= $p24->{dockerfile}{link} %>
+
+* Perl 5.22: <%= $p22->{dockerfile}{link} %>
+
+* Perl 5.20: <%= $p20->{dockerfile}{link} %>
+
+* Perl 5.16: <%= $p16->{dockerfile}{link} %>
+
+* Perl 5.10: <%= $p10->{dockerfile}{link} %>
+
+# How to use this image
+
+From your development folder call
+
+    $ docker container run --rm -v "$(pwd):/usr/src/app" tekki/perl:test
+
+This will test your code in the selected Perl version.
