@@ -4,7 +4,7 @@ docker:
 
 git:
   repo: https://github.com/Tekki/docker-perl-test
-  version: '0.03'
+  version: '0.04'
 
 global:
   app_folder: /usr/src/app
@@ -16,12 +16,16 @@ global:
     - DBD::MariaDB
     - DBD::Pg@3.8.0
     - DBD::SQLite
+    - SQL::Abstract
   perl_modules:
     - Test::CPAN::Changes
+    - Test::Deep
     - Test::Exception
     - Test::Pod
     - Test::Pod::Coverage
     - Test::Warn
+  perl_mojo_modules:
+    - Mojolicious
   title: Perl-Test
 
 releases:
@@ -34,6 +38,9 @@ releases:
       db:
         - 30-dbtest
         - dbtest
+      mojo:
+        - 30-mojotest
+        - mojotest
   p28:
     from: perl:5.28
     versions:
@@ -41,6 +48,8 @@ releases:
         - 28-test
       db:
         - 28-dbtest
+      mojo:
+        - 28-mojotest
   p26:
     from: perl:5.26
     versions:
@@ -48,6 +57,8 @@ releases:
         - 26-test
       db:
         - 26-dbtest
+      mojo:
+        - 26-mojotest
   p24:
     from: perl:5.24
     versions:
@@ -55,6 +66,8 @@ releases:
         - 24-test
       db:
         - 24-dbtest
+      mojo:
+        - 24-mojotest
   p22:
     from: perl:5.22
     versions:
@@ -62,6 +75,8 @@ releases:
         - 22-test
       db:
         - 22-dbtest
+      mojo:
+        - 22-mojotest
   p20:
     from: perl:5.20
     versions:
@@ -69,6 +84,8 @@ releases:
         - 20-test
       db:
         - 20-dbtest
+      mojo:
+        - 20-mojotest
   p16:
     from: perl:5.16
     versions:
@@ -76,6 +93,8 @@ releases:
         - 16-test
       db:
         - 16-dbtest
+      mojo:
+        - 16-mojotest
   p10:
     from: perl:5.10
     versions:
@@ -83,6 +102,8 @@ releases:
         - 10-test
       db:
         - 10-dbtest
+      mojo:
+        - 10-mojotest
 
 templates:
   - source: docker-entrypoint.ep
