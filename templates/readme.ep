@@ -14,7 +14,11 @@ The `dbtest` images additionally contain
 [DBD::MariaDB](https://metacpan.org/pod/DBD::MariaDB),
 [DBD::mysql](https://metacpan.org/pod/DBD::mysql),
 [DBD::Pg](https://metacpan.org/pod/DBD::Pg),
-[DBD::SQLite](https://metacpan.org/pod/DBD::SQLite).
+[DBD::SQLite](https://metacpan.org/pod/DBD::SQLite),
+[SQL::Abstract](https://metacpan.org/pod/SQL::Abstract).
+
+The `mojotest` images are built on top of `dbtest` and include
+[Mojolicious](https://metacpan.org/pod/Mojolicious).
 
 # Supported tags and respective Dockerfile links
 

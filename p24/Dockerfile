@@ -9,9 +9,12 @@ WORKDIR /usr/src/app
 
 RUN set -ex \
   && cpanm \
-    CPAN::Changes \
-    Devel::Cover \
-    Pod::Coverage \
+    Test::CPAN::Changes \
+    Test::Deep \
+    Test::Exception \
+    Test::Pod \
+    Test::Pod::Coverage \
+    Test::Warn \
   && rm -r /root/.cpanm
 
 ARG NOW=not-set
@@ -38,10 +41,22 @@ RUN set -ex \
     DBI \
     DBD::mysql \
     DBD::MariaDB \
-    DBD::Pg \
+    DBD::Pg@3.8.0 \
     DBD::SQLite \
+    SQL::Abstract \
   && rm -r /root/.cpanm
 
 ARG NOW=not-set
 LABEL org.opencontainers.image.created=$NOW
 LABEL org.opencontainers.image.version=24-dbtest
+
+FROM db AS mojo
+
+RUN set -ex \
+  && cpanm \
+    Mojolicious \
+  && rm -r /root/.cpanm
+
+ARG NOW=not-set
+LABEL org.opencontainers.image.created=$NOW
+LABEL org.opencontainers.image.version=24-mojotest

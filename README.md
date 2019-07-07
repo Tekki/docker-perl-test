@@ -14,25 +14,29 @@ The `dbtest` images additionally contain
 [DBD::MariaDB](https://metacpan.org/pod/DBD::MariaDB),
 [DBD::mysql](https://metacpan.org/pod/DBD::mysql),
 [DBD::Pg](https://metacpan.org/pod/DBD::Pg),
-[DBD::SQLite](https://metacpan.org/pod/DBD::SQLite).
+[DBD::SQLite](https://metacpan.org/pod/DBD::SQLite),
+[SQL::Abstract](https://metacpan.org/pod/SQL::Abstract).
+
+The `mojotest` images are built on top of `dbtest` and include
+[Mojolicious](https://metacpan.org/pod/Mojolicious).
 
 # Supported tags and respective Dockerfile links
 
-* Perl 5.30: [30-test, test, 30-dbtest, dbtest (p30/Dockerfile)](https://github.com/Tekki/docker-perl-test/blob/master/p30/Dockerfile)
+* Perl 5.30: [30-test, test, 30-dbtest, dbtest, 30-mojotest, mojotest (p30/Dockerfile)](https://github.com/Tekki/docker-perl-test/blob/master/p30/Dockerfile)
 
-* Perl 5.28: [28-test, 28-dbtest (p28/Dockerfile)](https://github.com/Tekki/docker-perl-test/blob/master/p28/Dockerfile)
+* Perl 5.28: [28-test, 28-dbtest, 28-mojotest (p28/Dockerfile)](https://github.com/Tekki/docker-perl-test/blob/master/p28/Dockerfile)
 
-* Perl 5.26: [26-test, 26-dbtest (p26/Dockerfile)](https://github.com/Tekki/docker-perl-test/blob/master/p26/Dockerfile)
+* Perl 5.26: [26-test, 26-dbtest, 26-mojotest (p26/Dockerfile)](https://github.com/Tekki/docker-perl-test/blob/master/p26/Dockerfile)
 
-* Perl 5.24: [24-test, 24-dbtest (p24/Dockerfile)](https://github.com/Tekki/docker-perl-test/blob/master/p24/Dockerfile)
+* Perl 5.24: [24-test, 24-dbtest, 24-mojotest (p24/Dockerfile)](https://github.com/Tekki/docker-perl-test/blob/master/p24/Dockerfile)
 
-* Perl 5.22: [22-test, 22-dbtest (p22/Dockerfile)](https://github.com/Tekki/docker-perl-test/blob/master/p22/Dockerfile)
+* Perl 5.22: [22-test, 22-dbtest, 22-mojotest (p22/Dockerfile)](https://github.com/Tekki/docker-perl-test/blob/master/p22/Dockerfile)
 
-* Perl 5.20: [20-test, 20-dbtest (p20/Dockerfile)](https://github.com/Tekki/docker-perl-test/blob/master/p20/Dockerfile)
+* Perl 5.20: [20-test, 20-dbtest, 20-mojotest (p20/Dockerfile)](https://github.com/Tekki/docker-perl-test/blob/master/p20/Dockerfile)
 
-* Perl 5.16: [16-test, 16-dbtest (p16/Dockerfile)](https://github.com/Tekki/docker-perl-test/blob/master/p16/Dockerfile)
+* Perl 5.16: [16-test, 16-dbtest, 16-mojotest (p16/Dockerfile)](https://github.com/Tekki/docker-perl-test/blob/master/p16/Dockerfile)
 
-* Perl 5.10: [10-test, 10-dbtest (p10/Dockerfile)](https://github.com/Tekki/docker-perl-test/blob/master/p10/Dockerfile)
+* Perl 5.10: [10-test, 10-dbtest, 10-mojotest (p10/Dockerfile)](https://github.com/Tekki/docker-perl-test/blob/master/p10/Dockerfile)
 
 # How to use this image
 

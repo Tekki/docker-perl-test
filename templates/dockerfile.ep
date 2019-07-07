@@ -28,3 +28,14 @@ RUN set -ex \\
   && rm -r /root/.cpanm
 
 %= $labels_db
+
+FROM db AS mojo
+
+RUN set -ex \\
+  && cpanm \\
+% for ($global->{perl_mojo_modules}->@*) {
+    <%= $_ %> \\
+% }
+  && rm -r /root/.cpanm
+
+%= $labels_mojo
