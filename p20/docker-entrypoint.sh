@@ -5,7 +5,7 @@
 # do not edit it directly
 #
 
-if [ -f cpanfile ]; then
+if [ $INSTALLDEPS ] && [ -f cpanfile ]; then
   cpanm --installdeps .
 fi
 

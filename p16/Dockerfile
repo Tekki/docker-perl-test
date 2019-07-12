@@ -28,6 +28,8 @@ LABEL org.opencontainers.image.title=Perl-Test
 LABEL org.opencontainers.image.url=https://github.com/Tekki/docker-perl-test
 LABEL org.opencontainers.image.version=16-test
 
+ENV INSTALLDEPS=
+
 COPY docker-entrypoint.sh /usr/local/bin
 RUN chmod 0755 /usr/local/bin/docker-entrypoint.sh
 ENTRYPOINT ["docker-entrypoint.sh"]

@@ -42,6 +42,6 @@ The `mojotest` images are built on top of `dbtest` and include
 
 From your development folder call
 
-    $ docker container run --rm -v "$(pwd):/usr/src/app" tekki/perl:test
+    $ docker container run --rm -e INSTALLDEPS=1 -v "$(pwd):/usr/src/app" tekki/perl:test
 
-This will test your code in the selected Perl version.
+This will install the dependencies from `cpanfile` and test your code in the selected Perl version.

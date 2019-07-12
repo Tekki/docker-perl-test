@@ -4,7 +4,7 @@ docker:
 
 git:
   repo: https://github.com/Tekki/docker-perl-test
-  version: '0.04'
+  version: '0.05'
 
 global:
   app_folder: /usr/src/app

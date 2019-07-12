@@ -1,7 +1,7 @@
 #!/bin/bash
 %= $warning
 
-if [ -f cpanfile ]; then
+if [ $INSTALLDEPS ] && [ -f cpanfile ]; then
   cpanm --installdeps .
 fi
 
