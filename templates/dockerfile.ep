@@ -12,6 +12,7 @@ RUN set -ex \\
 
 %= $labels
 
+ENV DEBIAN_PACKAGES=
 ENV INSTALLDEPS=
 
 COPY docker-entrypoint.sh /usr/local/bin
