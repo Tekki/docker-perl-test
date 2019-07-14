@@ -1,10 +1,11 @@
 ---
 docker:
+  buildkit: true
   image: tekki/perl
 
 git:
   repo: https://github.com/Tekki/docker-perl-test
-  version: '0.05'
+  version: '0.06'
 
 global:
   app_folder: /usr/src/app

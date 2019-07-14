@@ -28,6 +28,7 @@ LABEL org.opencontainers.image.title=Perl-Test
 LABEL org.opencontainers.image.url=https://github.com/Tekki/docker-perl-test
 LABEL org.opencontainers.image.version=28-test
 
+ENV DEBIAN_PACKAGES=
 ENV INSTALLDEPS=
 
 COPY docker-entrypoint.sh /usr/local/bin
