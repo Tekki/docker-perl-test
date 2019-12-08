@@ -44,4 +44,4 @@ From your development folder call
 
     $ docker container run --rm -e INSTALLDEPS=1 -v "$(pwd):/usr/src/app" tekki/perl:test
 
-This will install the dependencies from `cpanfile` and test your code in the selected Perl version.
+This will install the required and recommended dependencies from `cpanfile` and test your code in the selected Perl version.
