@@ -11,7 +11,7 @@ if [ $DEBIAN_PACKAGES ]; then
 fi
 
 if [ $INSTALLDEPS ] && [ -f cpanfile ]; then
-  cpanm --installdeps .
+  cpanm --installdeps --with-recommends .
 fi
 
 exec "$@"
