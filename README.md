@@ -5,14 +5,18 @@
 Perl test images.
 
 Different Perl versions with
-[CPAN::Changes](https://metacpan.org/pod/CPAN::Changes),
-[Devel::Cover](https://metacpan.org/pod/Devel::Cover) and
-[Pod::Coverage](https://metacpan.org/pod/Pod::Coverage).
+[Test::CPAN::Changes](https://metacpan.org/pod/Test::CPAN::Changes),
+[Test::Deep](https://metacpan.org/pod/Test::Deep),
+[Test::Exception](https://metacpan.org/pod/Test::Exception),
+[Test::Output](https://metacpan.org/pod/Test::Output),
+[Test::Pod](https://metacpan.org/pod/Test::Pod),
+[Test::Pod::Coverage](https://metacpan.org/pod/Test::Pod::Coverage),
+[Test::Warn](https://metacpan.org/pod/Test::Warn).
 
 The `dbtest` images additionally contain
 [DBI](https://metacpan.org/pod/DBI),
-[DBD::MariaDB](https://metacpan.org/pod/DBD::MariaDB),
 [DBD::mysql](https://metacpan.org/pod/DBD::mysql),
+[DBD::MariaDB](https://metacpan.org/pod/DBD::MariaDB),
 [DBD::Pg](https://metacpan.org/pod/DBD::Pg),
 [DBD::SQLite](https://metacpan.org/pod/DBD::SQLite),
 [SQL::Abstract](https://metacpan.org/pod/SQL::Abstract).

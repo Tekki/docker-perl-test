@@ -12,6 +12,7 @@ RUN set -ex \
     Test::CPAN::Changes \
     Test::Deep \
     Test::Exception \
+    Test::Output \
     Test::Pod \
     Test::Pod::Coverage \
     Test::Warn \
@@ -44,7 +45,7 @@ RUN set -ex \
     DBI \
     DBD::mysql \
     DBD::MariaDB \
-    DBD::Pg@3.8.0 \
+    DBD::Pg \
     DBD::SQLite \
     SQL::Abstract \
   && rm -r /root/.cpanm
