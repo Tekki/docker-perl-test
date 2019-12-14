@@ -5,7 +5,7 @@ docker:
 
 git:
   repo: https://github.com/Tekki/docker-perl-test
-  version: '0.07'
+  version: '0.08'
 
 global:
   app_folder: /usr/src/app
@@ -15,13 +15,14 @@ global:
     - DBI
     - DBD::mysql
     - DBD::MariaDB
-    - DBD::Pg@3.8.0
+    - DBD::Pg
     - DBD::SQLite
     - SQL::Abstract
   perl_modules:
     - Test::CPAN::Changes
     - Test::Deep
     - Test::Exception
+    - Test::Output
     - Test::Pod
     - Test::Pod::Coverage
     - Test::Warn
