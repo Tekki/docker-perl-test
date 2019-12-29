@@ -36,7 +36,7 @@ COPY docker-entrypoint.sh /usr/local/bin
 RUN chmod 0755 /usr/local/bin/docker-entrypoint.sh
 ENTRYPOINT ["docker-entrypoint.sh"]
 
-CMD ["prove", "-Ilib"]
+CMD ["prove", "-Ilib", "-r"]
 
 FROM base AS db
 
