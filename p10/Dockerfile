@@ -58,7 +58,7 @@ FROM db AS mojo
 
 RUN set -ex \
   && cpanm \
-    Mojolicious \
+    Mojolicious@8.43 \
   && rm -r /root/.cpanm
 
 ARG NOW=not-set

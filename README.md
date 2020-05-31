@@ -22,7 +22,7 @@ The `dbtest` images additionally contain
 [SQL::Abstract](https://metacpan.org/pod/SQL::Abstract).
 
 The `mojotest` images are built on top of `dbtest` and include
-[Mojolicious](https://metacpan.org/pod/Mojolicious).
+.
 
 # Supported tags and respective Dockerfile links
 

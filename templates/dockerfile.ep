@@ -36,7 +36,7 @@ FROM db AS mojo
 
 RUN set -ex \\
   && cpanm \\
-% for ($global->{perl_mojo_modules}->@*) {
+% for ($release->{perl_mojo_modules}->@*) {
     <%= $_ %> \\
 % }
   && rm -r /root/.cpanm

@@ -5,7 +5,7 @@ docker:
 
 git:
   repo: https://github.com/Tekki/docker-perl-test
-  version: '0.09'
+  version: '0.10'
 
 global:
   app_folder: /usr/src/app
@@ -26,8 +26,6 @@ global:
     - Test::Pod
     - Test::Pod::Coverage
     - Test::Warn
-  perl_mojo_modules:
-    - Mojolicious
   title: Perl-Test
 
 releases:
@@ -43,6 +41,8 @@ releases:
       mojo:
         - 30-mojotest
         - mojotest
+    perl_mojo_modules:
+      - Mojolicious
   p28:
     from: perl:5.28
     versions:
@@ -52,6 +52,8 @@ releases:
         - 28-dbtest
       mojo:
         - 28-mojotest
+    perl_mojo_modules:
+      - Mojolicious
   p26:
     from: perl:5.26
     versions:
@@ -61,6 +63,8 @@ releases:
         - 26-dbtest
       mojo:
         - 26-mojotest
+    perl_mojo_modules:
+      - Mojolicious
   p24:
     from: perl:5.24
     versions:
@@ -70,6 +74,8 @@ releases:
         - 24-dbtest
       mojo:
         - 24-mojotest
+    perl_mojo_modules:
+      - Mojolicious
   p22:
     from: perl:5.22
     versions:
@@ -79,6 +85,8 @@ releases:
         - 22-dbtest
       mojo:
         - 22-mojotest
+    perl_mojo_modules:
+      - Mojolicious
   p20:
     from: perl:5.20
     versions:
@@ -88,6 +96,8 @@ releases:
         - 20-dbtest
       mojo:
         - 20-mojotest
+    perl_mojo_modules:
+      - Mojolicious
   p16:
     from: perl:5.16
     versions:
@@ -97,6 +107,8 @@ releases:
         - 16-dbtest
       mojo:
         - 16-mojotest
+    perl_mojo_modules:
+      - Mojolicious
   p10:
     from: perl:5.10
     versions:
@@ -106,6 +118,8 @@ releases:
         - 10-dbtest
       mojo:
         - 10-mojotest
+    perl_mojo_modules:
+      - Mojolicious@8.43
 
 templates:
   - source: docker-entrypoint.ep
