@@ -22,9 +22,11 @@ The `dbtest` images additionally contain
 [SQL::Abstract](https://metacpan.org/pod/SQL::Abstract).
 
 The `mojotest` images are built on top of `dbtest` and include
-.
+[Mojolicious](https://metacpan.org/pod/Mojolicious).
 
 # Supported tags and respective Dockerfile links
+
+* Perl 5.32: [32-test, test, 32-dbtest, dbtest, 32-mojotest, mojotest (p32/Dockerfile)](https://github.com/Tekki/docker-perl-test/blob/master/p32/Dockerfile)
 
 * Perl 5.30: [30-test, test, 30-dbtest, dbtest, 30-mojotest, mojotest (p30/Dockerfile)](https://github.com/Tekki/docker-perl-test/blob/master/p30/Dockerfile)
 

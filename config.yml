@@ -5,7 +5,7 @@ docker:
 
 git:
   repo: https://github.com/Tekki/docker-perl-test
-  version: '0.10'
+  version: '0.11'
 
 global:
   app_folder: /usr/src/app
@@ -29,6 +29,20 @@ global:
   title: Perl-Test
 
 releases:
+  p32:
+    from: perl:5.32
+    versions:
+      base:
+        - 32-test
+        - test
+      db:
+        - 32-dbtest
+        - dbtest
+      mojo:
+        - 32-mojotest
+        - mojotest
+    perl_mojo_modules:
+      - Mojolicious
   p30:
     from: perl:5.30
     versions:

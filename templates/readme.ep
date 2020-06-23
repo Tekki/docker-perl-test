@@ -11,9 +11,11 @@ The `dbtest` images additionally contain
 %= join(",\n", map {"[$_](https://metacpan.org/pod/$_)"} $global->{perl_db_modules}->@*) . '.'
 
 The `mojotest` images are built on top of `dbtest` and include
-%= join(",\n", map {"[$_](https://metacpan.org/pod/$_)"} $global->{perl_mojo_modules}->@*) . '.'
+%= join(",\n", map {"[$_](https://metacpan.org/pod/$_)"} $p30->{perl_mojo_modules}->@*) . '.'
 
 # Supported tags and respective Dockerfile links
+
+* Perl 5.32: <%= $p32->{dockerfile}{link} %>
 
 * Perl 5.30: <%= $p30->{dockerfile}{link} %>
 
