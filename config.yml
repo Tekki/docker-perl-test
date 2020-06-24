@@ -48,13 +48,10 @@ releases:
     versions:
       base:
         - 30-test
-        - test
       db:
         - 30-dbtest
-        - dbtest
       mojo:
         - 30-mojotest
-        - mojotest
     perl_mojo_modules:
       - Mojolicious
   p28:
