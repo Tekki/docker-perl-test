@@ -1,0 +1,22 @@
+---
+version: '2.4'
+
+services:
+  main:
+    image: "tekki/perl:${PERL_VERSION}-test"
+    command: perl -E 'say $$^V;'
+  db:
+    image: tekki/perl:${PERL_VERSION}-dbtest
+    command: >
+      perl -MDBD::mysql -MDBD::MariaDB -MDBD::Pg -MDBD::SQLite
+        -E'say $$^V;
+           say "DBD::MariaDB $$DBD::MariaDB::VERSION";
+           say "DBD::mysql $$DBD::mysql::VERSION";
+           say "DBD::Pg $$DBD::Pg::VERSION";
+           say "DBD::SQLite $$DBD::SQLite::VERSION";'
+  mojo:
+    image: tekki/perl:${PERL_VERSION}-mojotest
+    command: >
+      perl -MMojolicious
+        -E'say $$^V;
+           say "Mojolicious $$Mojolicious::VERSION";'
