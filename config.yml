@@ -29,6 +29,20 @@ global:
   title: Perl-Test
 
 releases:
+  p34:
+    from: perl:5.34
+    versions:
+      base:
+        - 34-test
+        - test
+      db:
+        - 34-dbtest
+        - dbtest
+      mojo:
+        - 34-mojotest
+        - mojotest
+    perl_mojo_modules:
+      - Mojolicious
   p32:
     from: perl:5.32
     versions:
@@ -55,7 +69,7 @@ releases:
     perl_mojo_modules:
       - Mojolicious
   p28:
-    from: perl:5.28
+    from: perl:5.28-buster
     versions:
       base:
         - 28-test
@@ -66,7 +80,7 @@ releases:
     perl_mojo_modules:
       - Mojolicious
   p26:
-    from: perl:5.26
+    from: perl:5.26-buster
     versions:
       base:
         - 26-test
@@ -77,7 +91,7 @@ releases:
     perl_mojo_modules:
       - Mojolicious
   p24:
-    from: perl:5.24
+    from: perl:5.24-buster
     versions:
       base:
         - 24-test
@@ -87,50 +101,50 @@ releases:
         - 24-mojotest
     perl_mojo_modules:
       - Mojolicious
-  p22:
-    from: perl:5.22
-    versions:
-      base:
-        - 22-test
-      db:
-        - 22-dbtest
-      mojo:
-        - 22-mojotest
-    perl_mojo_modules:
-      - Mojolicious
-  p20:
-    from: perl:5.20
-    versions:
-      base:
-        - 20-test
-      db:
-        - 20-dbtest
-      mojo:
-        - 20-mojotest
-    perl_mojo_modules:
-      - Mojolicious
-  p16:
-    from: perl:5.16
-    versions:
-      base:
-        - 16-test
-      db:
-        - 16-dbtest
-      mojo:
-        - 16-mojotest
-    perl_mojo_modules:
-      - Mojolicious
-  p10:
-    from: perl:5.10
-    versions:
-      base:
-        - 10-test
-      db:
-        - 10-dbtest
-      mojo:
-        - 10-mojotest
-    perl_mojo_modules:
-      - Mojolicious@8.43
+  # p22:
+  #   from: perl:5.22-buster
+  #   versions:
+  #     base:
+  #       - 22-test
+  #     db:
+  #       - 22-dbtest
+  #     mojo:
+  #       - 22-mojotest
+  #   perl_mojo_modules:
+  #     - Mojolicious
+  # p20:
+  #   from: perl:5.20-buster
+  #   versions:
+  #     base:
+  #       - 20-test
+  #     db:
+  #       - 20-dbtest
+  #     mojo:
+  #       - 20-mojotest
+  #   perl_mojo_modules:
+  #     - Mojolicious
+  # p16:
+  #   from: perl:5.16-buster
+  #   versions:
+  #     base:
+  #       - 16-test
+  #     db:
+  #       - 16-dbtest
+  #     mojo:
+  #       - 16-mojotest
+  #   perl_mojo_modules:
+  #     - Mojolicious
+  # p10:
+  #   from: perl:5.10-buster
+  #   versions:
+  #     base:
+  #       - 10-test
+  #     db:
+  #       - 10-dbtest
+  #     mojo:
+  #       - 10-mojotest
+  #   perl_mojo_modules:
+  #     - Mojolicious@8.43
 
 templates:
   - source: docker-entrypoint.ep

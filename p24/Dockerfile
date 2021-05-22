@@ -3,7 +3,7 @@
 #
 # do not edit it directly
 #
-FROM perl:5.24 AS base
+FROM perl:5.24-buster AS base
 
 WORKDIR /usr/src/app
 

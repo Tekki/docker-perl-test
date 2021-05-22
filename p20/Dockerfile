@@ -3,12 +3,13 @@
 #
 # do not edit it directly
 #
-FROM perl:5.20 AS base
+FROM perl:5.20-buster AS base
 
 WORKDIR /usr/src/app
 
 RUN set -ex \
   && cpanm \
+    Storable \
     Test::CPAN::Changes \
     Test::Deep \
     Test::Exception \
