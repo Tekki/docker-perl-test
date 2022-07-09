@@ -26,6 +26,8 @@ The `mojotest` images are built on top of `dbtest` and include
 
 # Supported tags and respective Dockerfile links
 
+* Perl 5.36: [36-test, test, 36-dbtest, dbtest, 36-mojotest, mojotest (p36/Dockerfile)](https://github.com/Tekki/docker-perl-test/blob/master/p36/Dockerfile)
+
 * Perl 5.34: [34-test, 34-dbtest, 34-mojotest (p34/Dockerfile)](https://github.com/Tekki/docker-perl-test/blob/master/p34/Dockerfile)
 
 * Perl 5.32: [32-test, 32-dbtest, 32-mojotest (p32/Dockerfile)](https://github.com/Tekki/docker-perl-test/blob/master/p32/Dockerfile)
