@@ -7,7 +7,7 @@ if [ $DEBIAN_PACKAGES ]; then
 fi
 
 if [ $INSTALLDEPS ] && [ -f cpanfile ]; then
-  cpanm --installdeps --with-recommends .
+  cpm install -g --with-recommends
 fi
 
 exec "$@"
