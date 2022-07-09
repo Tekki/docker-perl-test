@@ -4,11 +4,11 @@ FROM <%= $from %> AS base
 WORKDIR <%= $global->{app_folder} %>
 
 RUN set -ex \\
-  && cpanm \\
+  && cpm install -g\\
 % for ($global->{perl_modules}->@*) {
     <%= $_ %> \\
 % }
-  && rm -r /root/.cpanm
+  && rm -r /root/.perl-cpm
 
 %= $labels
 
@@ -24,21 +24,21 @@ CMD ["prove", "-Ilib", "-r"]
 FROM base AS db
 
 RUN set -ex \\
-  && cpanm \\
+  && cpm install -g\\
 % for ($global->{perl_db_modules}->@*) {
     <%= $_ %> \\
 % }
-  && rm -r /root/.cpanm
+  && rm -r /root/.perl-cpm
 
 %= $labels_db
 
 FROM db AS mojo
 
 RUN set -ex \\
-  && cpanm \\
+  && cpm install -g\\
 % for ($release->{perl_mojo_modules}->@*) {
     <%= $_ %> \\
 % }
-  && rm -r /root/.cpanm
+  && rm -r /root/.perl-cpm
 
 %= $labels_mojo

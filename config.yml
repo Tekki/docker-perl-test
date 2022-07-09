@@ -5,7 +5,7 @@ docker:
 
 git:
   repo: https://github.com/Tekki/docker-perl-test
-  version: '0.11'
+  version: '0.12'
 
 global:
   app_folder: /usr/src/app
@@ -29,18 +29,29 @@ global:
   title: Perl-Test
 
 releases:
+  p36:
+    from: perl:5.36
+    versions:
+      base:
+        - 36-test
+        - test
+      db:
+        - 36-dbtest
+        - dbtest
+      mojo:
+        - 36-mojotest
+        - mojotest
+    perl_mojo_modules:
+      - Mojolicious
   p34:
     from: perl:5.34
     versions:
       base:
         - 34-test
-        - test
       db:
         - 34-dbtest
-        - dbtest
       mojo:
         - 34-mojotest
-        - mojotest
     perl_mojo_modules:
       - Mojolicious
   p32:
@@ -56,6 +67,7 @@ releases:
       - Mojolicious
   p30:
     from: perl:5.30
+    skip_update: true
     versions:
       base:
         - 30-test
@@ -67,6 +79,7 @@ releases:
       - Mojolicious
   p28:
     from: perl:5.28-buster
+    skip_update: true
     versions:
       base:
         - 28-test
@@ -78,6 +91,7 @@ releases:
       - Mojolicious
   p26:
     from: perl:5.26-buster
+    skip_update: true
     versions:
       base:
         - 26-test
@@ -89,6 +103,7 @@ releases:
       - Mojolicious
   p24:
     from: perl:5.24-buster
+    skip_update: true
     versions:
       base:
         - 24-test
@@ -100,6 +115,7 @@ releases:
       - Mojolicious
   p22:
     from: perl:5.22-buster
+    skip_update: true
     versions:
       base:
         - 22-test
@@ -111,6 +127,7 @@ releases:
       - Mojolicious
   p20:
     from: perl:5.20-buster
+    skip_update: true
     versions:
       base:
         - 20-test
@@ -122,6 +139,7 @@ releases:
       - Mojolicious
   p16:
     from: perl:5.16-buster
+    skip_update: true
     versions:
       base:
         - 16-test
@@ -133,6 +151,7 @@ releases:
       - Mojolicious
   p10:
     from: perl:5.10-buster
+    skip_update: true
     versions:
       base:
         - 10-test

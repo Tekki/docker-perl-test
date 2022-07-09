@@ -9,7 +9,6 @@ WORKDIR /usr/src/app
 
 RUN set -ex \
   && cpanm \
-    Storable \
     Test::CPAN::Changes \
     Test::Deep \
     Test::Exception \

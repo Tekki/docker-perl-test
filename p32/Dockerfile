@@ -8,7 +8,7 @@ FROM perl:5.32 AS base
 WORKDIR /usr/src/app
 
 RUN set -ex \
-  && cpanm \
+  && cpm install -g\
     Test::CPAN::Changes \
     Test::Deep \
     Test::Exception \
@@ -16,7 +16,7 @@ RUN set -ex \
     Test::Pod \
     Test::Pod::Coverage \
     Test::Warn \
-  && rm -r /root/.cpanm
+  && rm -r /root/.perl-cpm
 
 ARG NOW=not-set
 LABEL org.opencontainers.image.authors="Tekki <tekki@tekki.ch>"
@@ -41,14 +41,14 @@ CMD ["prove", "-Ilib", "-r"]
 FROM base AS db
 
 RUN set -ex \
-  && cpanm \
+  && cpm install -g\
     DBI \
     DBD::mysql \
     DBD::MariaDB \
     DBD::Pg \
     DBD::SQLite \
     SQL::Abstract \
-  && rm -r /root/.cpanm
+  && rm -r /root/.perl-cpm
 
 ARG NOW=not-set
 LABEL org.opencontainers.image.created=$NOW
@@ -57,9 +57,9 @@ LABEL org.opencontainers.image.version=32-dbtest
 FROM db AS mojo
 
 RUN set -ex \
-  && cpanm \
+  && cpm install -g\
     Mojolicious \
-  && rm -r /root/.cpanm
+  && rm -r /root/.perl-cpm
 
 ARG NOW=not-set
 LABEL org.opencontainers.image.created=$NOW

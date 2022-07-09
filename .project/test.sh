@@ -7,7 +7,7 @@ if [[ $(uname -a) =~ Microsoft ]]; then
 fi
 
 export PERL_VERSION
-for PERL_VERSION in 10 16 20 22 24 26 28 30 32 34; do
+for PERL_VERSION in 10 16 20 22 24 26 28 30 32 34 36; do
   echo ""
   echo "Perl 5.$PERL_VERSION"
   echo "========="
